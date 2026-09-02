@@ -1,4 +1,4 @@
-# PLN Web — Bearing Anomali ✅ VERSI BERSIH
+# deteksi anomali — Bearing Anomali ✅ VERSI BERSIH
 
 Sistem deteksi anomali suhu bearing berbasis XGBoost/Linear Regression.
 
