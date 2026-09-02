@@ -1,0 +1,5 @@
+# Blokir akses langsung ke folder app
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^app/ - [F,L]
+</IfModule>

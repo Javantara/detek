@@ -1,0 +1,3 @@
+target,tagno,label,total_data,train_data,test_data,mae,rmse,r2,threshold_error,candidate_anomaly,final_anomaly,min_consecutive,feature_cols
+Y1,858,Y1 Bearing Temperature,101856,81484,20372,0.7358779026358674,1.0641322930271249,0.9812040628472334,1.8948074340820311,6843,5947,10,"y1_bearing1,x_suhu_ruangan,load_1577,hour_sin,hour_cos,dow_sin,dow_cos,month_sin,month_cos"
+Y2,859,Y2 Bearing Temperature,101856,81484,20372,1.7396516153133033,2.618265923454432,0.9589936662286032,3.9466842651367116,12701,12078,10,"y2_bearing2,x_suhu_ruangan,load_1577,hour_sin,hour_cos,dow_sin,dow_cos,month_sin,month_cos"

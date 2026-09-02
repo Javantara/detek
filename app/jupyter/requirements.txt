@@ -1,0 +1,42 @@
+jupyterlab>=4.2.0
+notebook>=7.2.0
+
+# Bearing API (Flask micro-service)
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Database
+mysql-connector-python>=8.3.0
+SQLAlchemy>=2.0.30
+pymysql>=1.1.1
+
+# Data analysis
+numpy>=2.1.0
+pandas>=2.2.3
+scikit-learn>=1.5.0
+
+# XGBoost (model utama bearing anomaly)
+xgboost>=2.0.0
+
+# Deep Learning - LSTM (opsional, untuk model_type='lstm')
+# Install: pip install tensorflow>=2.15.0
+tensorflow>=2.15.0
+
+# Visualisasi interaktif
+plotly>=5.22.0
+matplotlib>=3.9.0
+seaborn>=0.13.2
+ipywidgets>=8.1.3
+
+# Jupyter extensions
+nbformat>=5.10.4
+ipython>=8.24.0
+
+# HTTP request ke PHP API
+requests>=2.32.2
+
+# Utility
+python-dotenv>=1.0.1
+openpyxl>=3.1.3
+xlrd>=2.0.1
+tqdm>=4.66.4

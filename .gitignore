@@ -1,0 +1,48 @@
+# ============================================================
+# pln_web — .gitignore
+# ============================================================
+
+# --- KREDENSIAL & SECRETS (WAJIB) ---
+app/config/database.php
+app/jupyter/config/.env
+*.env
+
+# --- MODEL ML TRAINED (bisa di-regenerate, ukuran besar) ---
+app/jupyter/models/*.h5
+app/jupyter/models/deep_learning_autoencoder/*.h5
+app/jupyter/models/deep_learning_autoencoder/*.pkl
+app/jupyter/models/xgboost/*.h5
+app/jupyter/scripts/models/*.pkl
+
+# --- DATA UPLOAD & CSV AKTUAL ---
+public/uploads/bearing/*.csv
+public/uploads/bearing/unit_97/
+database/DB_PACITAN_1_FINAL/IMPORT_AUTOENCODER/prediksi_autoencoder_import.csv
+
+# --- DATABASE DUMP BESAR (data, bukan schema) ---
+database/DB_PACITAN_1_FINAL/01_BUAT_ULANG_DB_PACITAN_1.sql
+
+# --- VIRTUAL ENVIRONMENT PYTHON ---
+app/jupyter/scripts/.venv
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# --- FILE BACKUP & TEMPORARY ---
+*.bak
+*.bak_*
+app/jupyter/scripts/bearing_api_backup.py
+app/jupyter/scripts/bearing_api_bu.py
+app/views/pages/bearing-anomali.php.bak_*
+
+# --- UPLOAD EXCEL (data lokal) ---
+public/uploads/excel/
+
+# --- OS & IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

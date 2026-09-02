@@ -1,0 +1,41 @@
+{
+  "method": "Deep Learning Autoencoder",
+  "main_model_for_comparison": "XGBoost",
+  "targets": {
+    "Y1": {
+      "tagno": 858,
+      "model": "autoencoder_y1_pln.h5",
+      "scaler": "scaler_autoencoder_y1_pln.pkl",
+      "features": [
+        "y1_bearing1",
+        "x_suhu_ruangan",
+        "load_1577",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "month_sin",
+        "month_cos"
+      ]
+    },
+    "Y2": {
+      "tagno": 859,
+      "model": "autoencoder_y2_pln.h5",
+      "scaler": "scaler_autoencoder_y2_pln.pkl",
+      "features": [
+        "y2_bearing2",
+        "x_suhu_ruangan",
+        "load_1577",
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "month_sin",
+        "month_cos"
+      ]
+    }
+  },
+  "min_consecutive": 10,
+  "output_table": "Deep_Learning__prediksi_autoencoder",
+  "note": "value_prediksi adalah rekonstruksi target dari Autoencoder. High/Low dibuat dari threshold reconstruction error. status_anomali memakai aturan minimal 10 data berturut-turut."
+}

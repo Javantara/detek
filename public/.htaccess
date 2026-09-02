@@ -1,0 +1,25 @@
+# Semua request diarahkan ke index.php
+# File statis (css/js/img) tetap diakses langsung
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /pln_web/public/
+
+    # Izinkan akses ke assets (css, js, img)
+    RewriteRule ^assets/ - [L]
+
+    # Blokir akses langsung ke file apapun selain index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
+
+    # Paksa semua .php ke index.php (kecuali index.php itu sendiri)
+    RewriteCond %{REQUEST_FILENAME} \.php$
+    RewriteCond %{REQUEST_URI} !^/pln_web/public/index\.php
+    RewriteRule ^(.*)$ index.php [L]
+</IfModule>
+
+# Tambahan keamanan: deny akses ke file PHP selain index.php
+<FilesMatch "^(?!index\.php$).*\.php$">
+    Require all denied
+</FilesMatch>
